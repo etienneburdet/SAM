@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Entrainements du jour</h1>
+<div class="container">
+  <% @trainings.each do |training| %>
+  <div class="card" style="width: 18rem;">
+<div class="card-body">
+  <h5 class="card-title">Plan <%= training.plan.name %></h5>
+
+  <p class="card-text"><%= training.description %></p>
+  <a href="#" class="card-link">Card link</a>
+  <a href="#" class="card-link">Another link</a>
+</div>
+</div>
+  <% end %>
+</div>

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :trainings, only: %i[index show]
-  resources :plans, only: %i[index show]
+  resources :trainings, only: %i[show]
+  resources :plans, only: %i[index show] do
+    resources :trainings, only: %i[show]
+  end
   namespace :admin do
     resources :trainings, only: %i[new update destroy]
     resources :plans, only: %i[new update destroy]

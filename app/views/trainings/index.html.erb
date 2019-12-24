@@ -1,6 +1,6 @@
-<h1>Entrainements du jour</h1>
 <div class="container">
-  <% @trainings.each do |training| %>
+  <h2>Entrainements</h2>
+  <%= @trainings.each do |training| %>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">Plan <%= training.plan.name %></h5>

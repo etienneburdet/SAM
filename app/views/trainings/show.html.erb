@@ -1,0 +1,19 @@
+<div class="row bg-primary">
+  <h1>Aujourd'hui</h1>
+</div>
+<div class="row">
+
+</div>
+
+<div class="container">
+  <% @trainings.each do |training| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Plan <%= training.plan.name %></h5>
+      <p class="card-text"><%= training.description %></p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+  <% end %>
+</div>
